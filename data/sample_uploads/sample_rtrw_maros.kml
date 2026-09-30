@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Rencana_Tata_Ruang_RTRW_Maros_2012_2032</name>
+    <Placemark>
+      <name>Kawasan Agrowisata Pucak Tompobulu (RTRW)</name>
+      <description>Peruntukan kawasan wisata agro dan pertanian organik dalam RTRW Kab. Maros 2012-2032</description>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>
+        119.720,-5.110,0 119.750,-5.100,0 119.760,-5.130,0 119.730,-5.140,0 119.720,-5.110,0
+      </coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Kawasan Industri Marusu (RTRW)</name>
+      <description>Peruntukan kawasan industri terintegrasi Mamminasata di Kecamatan Marusu</description>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>
+        119.500,-5.130,0 119.560,-5.120,0 119.570,-5.140,0 119.510,-5.150,0 119.500,-5.130,0
+      </coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  </Document>
+</kml>

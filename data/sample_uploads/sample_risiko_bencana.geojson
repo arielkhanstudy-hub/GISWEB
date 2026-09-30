@@ -1,0 +1,114 @@
+{
+  "type": "FeatureCollection",
+  "name": "Zona_Risiko_Bencana_Maros",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Posko BPBD Induk Maros",
+        "JENIS": "Posko Induk",
+        "KAPASITAS": 500,
+        "STATUS": "Siaga 24 Jam",
+        "LOGISTIK": "Lengkap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.574,
+          -5.004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Zona Rawan Banjir DAS Maros Hulu-Hilir",
+        "JENIS": "Zona Risiko Tinggi",
+        "LUAS_HA": 3200,
+        "FREKUENSI": "3-4x/tahun (Nov-Mar)",
+        "TERDAMPAK": "8.500 KK"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.52,
+              -5.0
+            ],
+            [
+              119.58,
+              -4.98
+            ],
+            [
+              119.6,
+              -5.01
+            ],
+            [
+              119.55,
+              -5.03
+            ],
+            [
+              119.52,
+              -5.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Zona Rawan Longsor Lereng Camba-Mallawa",
+        "JENIS": "Zona Risiko Sedang-Tinggi",
+        "LUAS_HA": 15800,
+        "FREKUENSI": "1-2x/tahun",
+        "TERDAMPAK": "2.300 KK"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.8,
+              -4.88
+            ],
+            [
+              119.89,
+              -4.83
+            ],
+            [
+              119.92,
+              -4.92
+            ],
+            [
+              119.83,
+              -4.97
+            ],
+            [
+              119.8,
+              -4.88
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Posko Evakuasi Bantimurung",
+        "JENIS": "Posko Lapangan",
+        "KAPASITAS": 250,
+        "STATUS": "Aktif Musim Hujan",
+        "LOGISTIK": "Perahu & Tenda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.666,
+          -5.018
+        ]
+      }
+    }
+  ]
+}

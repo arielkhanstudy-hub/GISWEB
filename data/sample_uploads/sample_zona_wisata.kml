@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Zona_Rencana_Pariwisata_Agrowisata_Pucak</name>
+    <Placemark>
+      <name>Kawasan Agrowisata Pucak Tompobulu</name>
+      <description>Rencana pengembangan agrowisata terpadu dan kebun buah tropis di Tompobulu Maros</description>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              119.720,-5.110,0
+              119.750,-5.100,0
+              119.760,-5.130,0
+              119.730,-5.140,0
+              119.720,-5.110,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

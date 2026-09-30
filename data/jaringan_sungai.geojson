@@ -1,0 +1,292 @@
+{
+  "type": "FeatureCollection",
+  "name": "Jaringan_Sungai_DAS_Maros",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Sungai Maros / Sungai Bantimurung (DAS Maros)",
+        "KODE_DAS": "19D-01-00",
+        "ORDE": "Sungai Orde I (Utama)",
+        "PANJANG_KM": 68.5,
+        "DAERAH_ALIRAN_KM2": 712.0,
+        "DEBIT_RERATA_M3S": 142,
+        "DEBIT_BANJIR_M3S": 890,
+        "ELEVASI_HULU_M": 1250,
+        "PENGELOLA": "BWS Pompengan-Jeneberang",
+        "STATUS": "Sungai Lintas Kabupaten - Strategis Nasional",
+        "FUNGSI": "Air Baku PDAM, Irigasi Teknis, Pariwisata (Bantimurung)",
+        "RISIKO_BANJIR": "Sedang-Tinggi (musim penghujan Nov-Mar)",
+        "SUMBER_DATA": "BBWS Pompengan-Jeneberang & BIG 2023",
+        "COLOR": "#0077b6",
+        "WEIGHT": 5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.82,
+            -4.95
+          ],
+          [
+            119.78,
+            -4.98
+          ],
+          [
+            119.73,
+            -4.995
+          ],
+          [
+            119.68,
+            -5.005
+          ],
+          [
+            119.64,
+            -5.008
+          ],
+          [
+            119.6,
+            -5.0
+          ],
+          [
+            119.575,
+            -4.99
+          ],
+          [
+            119.545,
+            -4.975
+          ],
+          [
+            119.51,
+            -4.96
+          ],
+          [
+            119.475,
+            -4.95
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Sungai Bantimurung (Aliran Karst Resurgent Spring)",
+        "KODE_DAS": "19D-01-02",
+        "ORDE": "Anak Sungai Orde II",
+        "PANJANG_KM": 22.4,
+        "DAERAH_ALIRAN_KM2": 245.0,
+        "DEBIT_RERATA_M3S": 28,
+        "DEBIT_BANJIR_M3S": 210,
+        "ELEVASI_HULU_M": 650,
+        "PENGELOLA": "BWS Pompengan-Jeneberang",
+        "STATUS": "Sungai Kars — Sumber Air Wisata Bantimurung",
+        "FUNGSI": "Pariwisata air terjun, air baku kecamatan, irigasi sawah",
+        "RISIKO_BANJIR": "Rendah (aliran stabil dari mata air kars)",
+        "SUMBER_DATA": "BBWS Pompengan-Jeneberang 2022",
+        "COLOR": "#0096c7",
+        "WEIGHT": 3.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.72,
+            -5.04
+          ],
+          [
+            119.685,
+            -5.025
+          ],
+          [
+            119.665,
+            -5.015
+          ],
+          [
+            119.64,
+            -5.008
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Sungai Moncongloe / Tallo Hulu",
+        "KODE_DAS": "19C-03-01",
+        "ORDE": "Sungai Orde II",
+        "PANJANG_KM": 19.8,
+        "DAERAH_ALIRAN_KM2": 138.0,
+        "DEBIT_RERATA_M3S": 18,
+        "DEBIT_BANJIR_M3S": 145,
+        "ELEVASI_HULU_M": 380,
+        "PENGELOLA": "BWS Pompengan-Jeneberang / Pemkot Makassar",
+        "STATUS": "Sungai Batas Maros-Gowa-Makassar",
+        "FUNGSI": "Batas administratif wilayah, drainase kawasan peri-urban",
+        "RISIKO_BANJIR": "Tinggi (banjir kiriman dari hulu Gowa)",
+        "SUMBER_DATA": "BBWS Pompengan-Jeneberang 2022",
+        "COLOR": "#48cae4",
+        "WEIGHT": 2.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.68,
+            -5.13
+          ],
+          [
+            119.62,
+            -5.14
+          ],
+          [
+            119.56,
+            -5.135
+          ],
+          [
+            119.51,
+            -5.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Sungai Bontoa (Muara Pesisir Bontoa)",
+        "KODE_DAS": "19D-01-07",
+        "ORDE": "Sungai Orde III (Muara Salin)",
+        "PANJANG_KM": 14.2,
+        "DAERAH_ALIRAN_KM2": 89.0,
+        "DEBIT_RERATA_M3S": 12,
+        "DEBIT_BANJIR_M3S": 78,
+        "ELEVASI_HULU_M": 85,
+        "PENGELOLA": "BWS Pompengan-Jeneberang",
+        "STATUS": "Sungai Pasang Surut - Air Payau",
+        "FUNGSI": "Budidaya tambak kepiting & bandeng, jalur perahu nelayan",
+        "RISIKO_BANJIR": "Rendah (terpengaruh pasang surut laut)",
+        "SUMBER_DATA": "BBWS Pompengan-Jeneberang 2022",
+        "COLOR": "#00b4d8",
+        "WEIGHT": 2.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.57,
+            -4.91
+          ],
+          [
+            119.54,
+            -4.895
+          ],
+          [
+            119.505,
+            -4.88
+          ],
+          [
+            119.47,
+            -4.87
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Sungai Cenrana (Hulu DAS Walanae)",
+        "KODE_DAS": "19E-02-01",
+        "ORDE": "Sungai Orde II",
+        "PANJANG_KM": 28.6,
+        "DAERAH_ALIRAN_KM2": 190.0,
+        "DEBIT_RERATA_M3S": 22,
+        "DEBIT_BANJIR_M3S": 180,
+        "ELEVASI_HULU_M": 850,
+        "PENGELOLA": "BWS Pompengan-Jeneberang",
+        "STATUS": "Sungai Lintas Kabupaten Maros-Bone",
+        "FUNGSI": "Hulu DAS Walanae, sumber air PDAM Cenrana, irigasi sawah",
+        "RISIKO_BANJIR": "Sedang (erosi lereng pegunungan)",
+        "SUMBER_DATA": "BBWS Pompengan-Jeneberang 2022",
+        "COLOR": "#90e0ef",
+        "WEIGHT": 2,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.88,
+            -4.82
+          ],
+          [
+            119.84,
+            -4.9
+          ],
+          [
+            119.8,
+            -4.97
+          ],
+          [
+            119.77,
+            -5.01
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Saluran Induk Irigasi Maros (SI. Maros) - Daerah Irigasi Maros",
+        "KODE_DAS": "SI-MAROS-01",
+        "ORDE": "Saluran Irigasi Primer",
+        "PANJANG_KM": 18.5,
+        "DAERAH_ALIRAN_KM2": null,
+        "DEBIT_RERATA_M3S": 6.5,
+        "DEBIT_BANJIR_M3S": null,
+        "ELEVASI_HULU_M": 42,
+        "PENGELOLA": "Dinas PU SDA Kabupaten Maros / BBWS",
+        "STATUS": "Saluran Irigasi Teknis Tersier LP2B",
+        "FUNGSI": "Irigasi sawah beririgasi LP2B 3.215 Ha (Kecamatan Lau, Maros Baru, Turikale)",
+        "RISIKO_BANJIR": "Rendah (terkontrol bendung)",
+        "SUMBER_DATA": "Dinas PUPR Kab. Maros 2023",
+        "COLOR": "#caf0f8",
+        "WEIGHT": 1.5,
+        "DASH": "4,3"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.575,
+            -4.99
+          ],
+          [
+            119.56,
+            -4.97
+          ],
+          [
+            119.54,
+            -4.95
+          ],
+          [
+            119.525,
+            -4.93
+          ],
+          [
+            119.51,
+            -4.915
+          ]
+        ]
+      }
+    }
+  ]
+}

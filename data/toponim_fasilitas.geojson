@@ -1,0 +1,512 @@
+{
+  "type": "FeatureCollection",
+  "name": "Toponim_Fasilitas_Penting_Maros",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Kantor Bupati Kabupaten Maros",
+        "kategori": "Pemerintahan",
+        "alamat": "Jl. Jenderal Sudirman No. 1, Turikale",
+        "icon": "building-columns",
+        "icon_color": "#d90429",
+        "telp": "(0411) 371001",
+        "website": "https://maroskab.go.id",
+        "deskripsi": "Pusat komando pemerintahan daerah Kabupaten Maros. Gedung berlantai 3 bergaya arsitektur modern dengan ruang rapat, BKAD, dan DPRD Maros."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5768,
+          -5.0065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Kantor DPRD Kabupaten Maros",
+        "kategori": "Pemerintahan",
+        "alamat": "Jl. Jenderal Sudirman, Turikale",
+        "icon": "landmark",
+        "icon_color": "#1d3557",
+        "telp": "(0411) 371002",
+        "website": "https://dprd.maroskab.go.id",
+        "deskripsi": "Dewan Perwakilan Rakyat Daerah Kabupaten Maros, lembaga legislatif 45 anggota hasil Pemilu 2024."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5758,
+          -5.0072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Bandara Internasional Sultan Hasanuddin (UPG)",
+        "kategori": "Transportasi Udara",
+        "alamat": "Kecamatan Mandai, Kabupaten Maros",
+        "icon": "plane-departure",
+        "icon_color": "#0077b6",
+        "telp": "172 (Contact Center AP I)",
+        "website": "https://hasanuddin-airport.co.id",
+        "deskripsi": "Hub penerbangan utama Kawasan Timur Indonesia. Kapasitas 25 juta penumpang/tahun. Dua runway paralel (3.000m & 2.500m). Operator: InJourney Airports / AP I."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.554,
+          -5.0614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Stasiun KA Maros (Trans Sulawesi)",
+        "kategori": "Transportasi Kereta Api",
+        "alamat": "Desa Pallantikang, Kecamatan Maros Baru",
+        "icon": "train",
+        "icon_color": "#6f42c1",
+        "telp": "Balai Pengelola KA Sulsel / DJKA",
+        "website": "https://dephub.go.id",
+        "deskripsi": "Stasiun kereta api modern lintas Makassar-Maros-Pangkep-Barru. Rel standar gauge 1435mm. Kapasitas 500 penumpang/hari."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5694,
+          -4.9855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Taman Wisata Alam Bantimurung (Kingdom of Butterfly)",
+        "kategori": "Pariwisata Alam",
+        "alamat": "Jl. Poros Maros-Bone KM 12, Bantimurung",
+        "icon": "tree",
+        "icon_color": "#2a9d8f",
+        "telp": "(0411) 371555",
+        "website": "https://bantimurungbulusaraung.id",
+        "deskripsi": "Dijuluki 'Kingdom of Butterfly' oleh Alfred R. Wallace (1857). Air terjun alami 12m, gua Salukkan Kallang terdalam Sulawesi (11km), 250+ spesies kupu-kupu."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6755,
+          -5.0163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Geopark Rammang-Rammang (UNESCO Global Geopark 2023)",
+        "kategori": "Pariwisata Geologi",
+        "alamat": "Desa Salenrang, Kecamatan Bontoa / Simbang",
+        "icon": "mountain-sun",
+        "icon_color": "#38b000",
+        "telp": "+62 812-4245-1234",
+        "website": "https://marospangkepgeopark.id",
+        "deskripsi": "Gugusan menara karst terluas ke-2 dunia. UNESCO Global Geopark resmi 2023. Susur sungai perahu jolloro, kampung Berua terpencil, gua-gua prasejarah."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6154,
+          -4.9352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Situs Prasejarah Gua Leang-Leang (>45.500 Tahun)",
+        "kategori": "Cagar Budaya & Arkeologi",
+        "alamat": "Kel. Leang-Leang, Kecamatan Bantimurung",
+        "icon": "monument",
+        "icon_color": "#e76f51",
+        "telp": "BPCB Sulawesi Selatan",
+        "website": "https://kebudayaan.kemdikbud.go.id",
+        "deskripsi": "Situs lukisan cadas purba tertua di dunia (2021, Nature). Cap tangan & gambar babi rusa berusia >45.500 tahun. Warisan budaya dunia."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6645,
+          -4.9753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "RSUD dr. La Palaloi Maros (Kelas B)",
+        "kategori": "Fasilitas Kesehatan",
+        "alamat": "Jl. Poros Makassar-Maros KM 29",
+        "icon": "hospital",
+        "icon_color": "#e63946",
+        "telp": "(0411) 371077",
+        "website": "https://rsud.maroskab.go.id",
+        "deskripsi": "RSUD kelas B rujukan utama Kab. Maros. 200 tempat tidur, IGD 24 jam, poliklinik spesialis, NICU, ICU, laboratorium klinik."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5785,
+          -5.0022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hutan Pendidikan Bengo-Bengo Fahutan Unhas",
+        "kategori": "Pendidikan Kehutanan",
+        "alamat": "Kecamatan Cenrana, Kabupaten Maros",
+        "icon": "graduation-cap",
+        "icon_color": "#1b4332",
+        "telp": "Fahutan Unhas",
+        "website": "https://forestry.unhas.ac.id",
+        "deskripsi": "Laboratorium alam riset silvikultur & konservasi Fakultas Kehutanan Unhas. Luas 1.750 Ha, hutan hujan tropis dataran menengah."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.782,
+          -5.0255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Masjid Agung Al-Markaz Al-Islami Maros",
+        "kategori": "Tempat Ibadah & Landmark",
+        "alamat": "Jl. Jenderal Sudirman No. 8, Turikale",
+        "icon": "mosque",
+        "icon_color": "#007f5f",
+        "telp": "Pengurus Al-Markaz Maros",
+        "website": "https://maroskab.go.id",
+        "deskripsi": "Masjid agung ikonik pusat Kabupaten Maros. Kapasitas 5.000 jamaah. Arsitektur campuran Bugis-Makassar-modern dengan menara menjulang tinggi."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5742,
+          -5.0088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pusat Kuliner Roti Maros & Pasar Sentral",
+        "kategori": "Kuliner & Perdagangan",
+        "alamat": "Jl. Poros Maros-Makassar (Sekitar Pasar Sentral)",
+        "icon": "shop",
+        "icon_color": "#f39c12",
+        "telp": "Dinas Koperasi UKM Maros",
+        "website": "https://diskopumkm.maroskab.go.id",
+        "deskripsi": "Pusat sentra Roti Maros legendaris berisi selai srikaya khas. Pasar Sentral Turikale sebagai pusat perdagangan komoditas pertanian, rempah, dan ikan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.572,
+          -5.0035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pelabuhan Pa'dekakkang (Feri Antar Pulau)",
+        "kategori": "Transportasi Laut",
+        "alamat": "Pantai Pa'dekakkang, Kecamatan Bontoa",
+        "icon": "ferry",
+        "icon_color": "#0077b6",
+        "telp": "Dishub Kab. Maros",
+        "website": "https://dishub.maroskab.go.id",
+        "deskripsi": "Pelabuhan tradisional penghubung desa-desa pesisir dan pulau kecil di Selat Makassar. Jalur perahu motor & kapal feri antar kecamatan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.48,
+          -4.87
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "PDAM Tirta Mangkaluku Maros",
+        "kategori": "Infrastruktur Air Bersih",
+        "alamat": "Jl. HOS Cokroaminoto, Turikale",
+        "icon": "faucet-drip",
+        "icon_color": "#0096c7",
+        "telp": "(0411) 371088",
+        "website": "https://pdam.maroskab.go.id",
+        "deskripsi": "Perusahaan Daerah Air Minum Kab. Maros. Melayani 45.000 sambungan rumah. Sumber baku: Bendung Maros & Sungai Bantimurung."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.58,
+          -5.005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Universitas Muslim Maros (UMMA)",
+        "kategori": "Pendidikan Tinggi",
+        "alamat": "Jl. Dr. Ratulangi No. 62, Turikale",
+        "icon": "university",
+        "icon_color": "#6f42c1",
+        "telp": "(0411) 371300",
+        "website": "https://umma.ac.id",
+        "deskripsi": "Universitas swasta terkemuka di Maros dengan program studi teknik, pertanian, hukum, dan pendidikan. Terakreditasi BAN-PT B."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.581,
+          -5.0048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "BRI Unit Maros / Bank Sulselbar Cabang Maros",
+        "kategori": "Perbankan & Keuangan",
+        "alamat": "Jl. Jenderal Sudirman, Turikale",
+        "icon": "building",
+        "icon_color": "#1565c0",
+        "telp": "(0411) 371100",
+        "website": "https://bri.co.id",
+        "deskripsi": "Pusat perbankan dan layanan keuangan utama Kabupaten Maros. Bank BRI, BSI, Bank Sulselbar hadir di pusat kota."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.575,
+          -5.006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pasar Induk Tanralili (Agro-Market)",
+        "kategori": "Pasar Agribisnis",
+        "alamat": "Kecamatan Tanralili, Kabupaten Maros",
+        "icon": "basket-shopping",
+        "icon_color": "#e9c46a",
+        "telp": "Dinas Perindag Maros",
+        "website": "https://maroskab.go.id",
+        "deskripsi": "Pasar agribisnis terbesar melayani sayuran, buah, dan komoditas hortikultura produksi lereng Camba-Tompobulu."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.61,
+          -5.09
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Bendung Maros (Intake PDAM & Irigasi)",
+        "kategori": "Infrastruktur Pengairan",
+        "alamat": "Sungai Maros, Kecamatan Bantimurung",
+        "icon": "water",
+        "icon_color": "#0096c7",
+        "telp": "BBWS Pompengan-Jeneberang",
+        "website": "https://sda.pu.go.id",
+        "deskripsi": "Bendung sungai Maros sebagai intake air baku PDAM Maros dan pengendali irigasi teknis 3.215 Ha sawah di 3 kecamatan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.605,
+          -4.98
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Kantor Dinas Kehutanan Kab. Maros",
+        "kategori": "Pemerintahan Sektor Kehutanan",
+        "alamat": "Jl. Veteran No. 12, Turikale, Maros",
+        "icon": "leaf",
+        "icon_color": "#2d6a4f",
+        "telp": "(0411) 371050",
+        "website": "https://dishutla.maroskab.go.id",
+        "deskripsi": "Pengelola kawasan hutan lindung, hutan produksi, dan RTH kabupaten. Koordinator program perhutanan sosial dan PKH."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5795,
+          -5.008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "PLN ULP Maros (Gardu Induk Maros 150kV)",
+        "kategori": "Infrastruktur Energi",
+        "alamat": "Kecamatan Turikale, Maros",
+        "icon": "bolt",
+        "icon_color": "#f39c12",
+        "telp": "123 (PLN Call Center)",
+        "website": "https://pln.co.id",
+        "deskripsi": "Gardu Induk 150kV dan ULP PLN Maros. Melayani 95.000 pelanggan rumah tangga dan industri se-Kabupaten Maros."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.582,
+          -5.01
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pos Balai Taman Nasional Bantimurung Bulusaraung",
+        "kategori": "Konservasi Alam",
+        "alamat": "Jl. Poros Bantimurung, Bantimurung",
+        "icon": "tree-city",
+        "icon_color": "#1b4332",
+        "telp": "BTNBB / KLHK",
+        "website": "https://bantimurungbulusaraung.id",
+        "deskripsi": "Pos inti Balai TN Bantimurung Bulusaraung (luas 43.750 Ha). Pusat pemantauan satwa liar, pengelolaan wisata alam, dan patroli kawasan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.675,
+          -4.97
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "SMA Negeri 1 Maros (SMAN Maros)",
+        "kategori": "Pendidikan Menengah",
+        "alamat": "Jl. Dr. Ratulangi, Turikale, Maros",
+        "icon": "school",
+        "icon_color": "#0ea5e9",
+        "telp": "(0411) 371200",
+        "website": "https://sman1maros.sch.id",
+        "deskripsi": "SMA unggulan Kabupaten Maros terakreditasi A. Salah satu sekolah terbaik se-Sulawesi Selatan dengan prestasi olimpiade sains nasional."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.576,
+          -5.0042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Polres Maros (Kepolisian Resor)",
+        "kategori": "Keamanan & Ketertiban",
+        "alamat": "Jl. Jenderal Sudirman No. 45, Turikale",
+        "icon": "shield-halved",
+        "icon_color": "#1e40af",
+        "telp": "(0411) 371500 / 110",
+        "website": "https://polri.go.id",
+        "deskripsi": "Kepolisian Resor Maros. Wilayah hukum mencakup 14 kecamatan dengan 14 Polsek. Markas Satlantas, Reskrim, dan Samapta."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.577,
+          -5.0025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "BPBD Kabupaten Maros (Badan Penanggulangan Bencana)",
+        "kategori": "Kebencanaan & SAR",
+        "alamat": "Jl. Poros Makassar-Maros, Turikale",
+        "icon": "kit-medical",
+        "icon_color": "#dc2626",
+        "telp": "(0411) 371600 / 119",
+        "website": "https://bpbd.maroskab.go.id",
+        "deskripsi": "Badan Penanggulangan Bencana Daerah Kab. Maros. Menangani banjir DAS Maros, longsor lereng Camba, dan angin puting beliung pesisir Bontoa."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.578,
+          -5.0055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Puskesmas Bantimurung (Rawat Inap Siaga Wisata)",
+        "kategori": "Fasilitas Kesehatan",
+        "alamat": "Jl. Poros Bantimurung, Kecamatan Bantimurung",
+        "icon": "house-medical",
+        "icon_color": "#ef4444",
+        "telp": "(0411) 371400",
+        "website": "https://dinkes.maroskab.go.id",
+        "deskripsi": "Puskesmas rawat inap siaga wisata alam. Melayani kunjungan wisatawan, kecelakaan goa/air terjun, dan masyarakat sekitar kawasan TN."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6621,
+          -5.0125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "TPA (Tempat Pemrosesan Akhir Sampah) Regional Maros",
+        "kategori": "Infrastruktur Sanitasi",
+        "alamat": "Kecamatan Moncongloe, Maros (perbatasan Makassar)",
+        "icon": "recycle",
+        "icon_color": "#64748b",
+        "telp": "Dinas LH Kab. Maros",
+        "website": "https://dlh.maroskab.go.id",
+        "deskripsi": "TPA Regional Kawasan Mamminasata mengelola 300 ton/hari sampah dari Maros-Makassar. Teknologi sanitary landfill dengan gas metana recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.52,
+          -5.13
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "name": "Titik_Posko_Bencana_BPBD_Maros",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA_POSKO": "Posko Induk BPBD Maros",
+        "JENIS": "Posko Utama",
+        "KAPASITAS": "500 Jiwa",
+        "STATUS": "Siaga 24 Jam",
+        "LOGISTIK": "Tersedia Lengkap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.574,
+          -5.004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA_POSKO": "Posko Evakuasi Banjir DAS Maros Baru",
+        "JENIS": "Posko Lapangan Pesisir",
+        "KAPASITAS": "250 Jiwa",
+        "STATUS": "Aktif Musim Hujan",
+        "LOGISTIK": "Perahu Karet & Tenda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.538,
+          -4.982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA_POSKO": "Posko Siaga Longsor Camba Kappang",
+        "JENIS": "Posko Tanggap Darurat Jalan",
+        "KAPASITAS": "150 Jiwa",
+        "STATUS": "Standby Alat Berat",
+        "LOGISTIK": "Excavator & Ambulans"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.825,
+          -4.925
+        ]
+      }
+    }
+  ]
+}

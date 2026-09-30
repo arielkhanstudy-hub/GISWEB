@@ -1,0 +1,15 @@
+NAMA_PUSKESMAS,TIPE,KECAMATAN,LATITUDE,LONGITUDE,KAPASITAS_RANAP,DOKTER_UMUM,BIDAN,PERAWAT,APOTEKER,OPERASIONAL,TAHUN_BANGUN
+Puskesmas Turikale,Rawat Inap,Turikale,-5.0078,119.5752,20,2,8,15,1,24 Jam,2005
+Puskesmas Mandai,Rawat Inap,Mandai,-5.0712,119.5535,25,3,10,18,1,24 Jam,2010
+Puskesmas Bantimurung,Rawat Inap Siaga Wisata,Bantimurung,-5.0125,119.6621,15,2,7,12,1,24 Jam,2008
+Puskesmas Simbang,Non Rawat Inap,Simbang,-5.0348,119.6354,0,1,5,8,1,07.00-14.00,2012
+Puskesmas Maros Baru,Rawat Inap,Maros Baru,-4.9858,119.5396,15,2,8,14,1,24 Jam,2007
+Puskesmas Lau,Non Rawat Inap,Lau,-4.9450,119.5600,0,1,4,7,1,07.00-14.00,2015
+Puskesmas Bontoa,Non Rawat Inap,Bontoa,-4.8745,119.5300,0,1,5,9,1,07.00-14.00,2011
+Puskesmas Tanralili,Non Rawat Inap,Tanralili,-5.0900,119.6100,0,1,4,8,1,07.00-14.00,2014
+Puskesmas Moncongloe,Non Rawat Inap,Moncongloe,-5.1452,119.5408,0,1,3,6,1,07.00-14.00,2016
+Puskesmas Tompobulu,Rawat Inap,Tompobulu,-5.1200,119.7400,12,2,6,10,1,24 Jam,2009
+Puskesmas Camba,Rawat Inap,Camba,-4.9200,119.8300,10,1,5,9,1,24 Jam,2003
+Puskesmas Cenrana,Non Rawat Inap,Cenrana,-5.0200,119.7800,0,1,4,7,1,07.00-14.00,2013
+Puskesmas Mallawa,Non Rawat Inap,Mallawa,-4.8300,119.8900,0,1,3,6,1,07.00-14.00,2017
+Puskesmas Marusu,Non Rawat Inap,Marusu,-5.1150,119.5050,0,1,4,8,1,07.00-14.00,2018

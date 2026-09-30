@@ -1,0 +1,512 @@
+{
+  "type": "FeatureCollection",
+  "name": "Jaringan_Jalan_Kabupaten_Maros",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Poros Maros - Makassar (Trans Sulawesi S1)",
+        "NOMOR_RUAS": "073",
+        "FUNGSI": "Arteri Primer",
+        "STATUS": "Jalan Nasional",
+        "KELAS": "Kelas I",
+        "LEBAR_M": 14,
+        "PANJANG_KM": 24.5,
+        "PERMUKAAN": "Hotmix Beton 4 Lajur",
+        "KONDISI": "Baik",
+        "KECEPATAN_MAX_KMH": 80,
+        "WEWENANG": "Ditjen Bina Marga PUPR",
+        "TAHUN_KONSTRUKSI": 1998,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2022,
+        "COLOR": "#e63946",
+        "WEIGHT": 5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.52,
+            -5.15
+          ],
+          [
+            119.535,
+            -5.12
+          ],
+          [
+            119.552,
+            -5.08
+          ],
+          [
+            119.565,
+            -5.045
+          ],
+          [
+            119.575,
+            -5.01
+          ],
+          [
+            119.578,
+            -4.995
+          ],
+          [
+            119.576,
+            -4.95
+          ],
+          [
+            119.565,
+            -4.91
+          ],
+          [
+            119.55,
+            -4.85
+          ],
+          [
+            119.54,
+            -4.8
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Poros Maros - Bone via Camba (Transsulawesi Timur)",
+        "NOMOR_RUAS": "124",
+        "FUNGSI": "Kolektor Primer K1",
+        "STATUS": "Jalan Nasional",
+        "KELAS": "Kelas II",
+        "LEBAR_M": 8,
+        "PANJANG_KM": 58.2,
+        "PERMUKAAN": "Hotmix (Jalur Pegunungan, Tanjakan ±18%)",
+        "KONDISI": "Sedang-Baik",
+        "KECEPATAN_MAX_KMH": 60,
+        "WEWENANG": "Ditjen Bina Marga PUPR",
+        "TAHUN_KONSTRUKSI": 1975,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2021,
+        "COLOR": "#f77f00",
+        "WEIGHT": 4,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.578,
+            -4.995
+          ],
+          [
+            119.615,
+            -5.005
+          ],
+          [
+            119.66,
+            -5.008
+          ],
+          [
+            119.705,
+            -5.012
+          ],
+          [
+            119.75,
+            -4.99
+          ],
+          [
+            119.79,
+            -4.96
+          ],
+          [
+            119.825,
+            -4.925
+          ],
+          [
+            119.855,
+            -4.885
+          ],
+          [
+            119.895,
+            -4.845
+          ],
+          [
+            119.95,
+            -4.82
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jalur KA Trans Sulawesi — Makassar - Parepare Lintas Maros",
+        "NOMOR_RUAS": "KA-SULSEL-01",
+        "FUNGSI": "Rel Kereta Api",
+        "STATUS": "Proyek Strategis Nasional",
+        "KELAS": "Rel Baja R54 Standar Gauge 1435mm",
+        "LEBAR_M": 12,
+        "PANJANG_KM": 32.0,
+        "PERMUKAAN": "Rel Kereta Api + Bantalan Beton Pratekan",
+        "KONDISI": "Dalam Operasi 2023",
+        "KECEPATAN_MAX_KMH": 120,
+        "WEWENANG": "Balai Pengelola Kereta Api Sulsel / DJKA",
+        "TAHUN_KONSTRUKSI": 2020,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2023,
+        "COLOR": "#212529",
+        "WEIGHT": 3,
+        "DASH": "8,4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.53,
+            -5.13
+          ],
+          [
+            119.545,
+            -5.08
+          ],
+          [
+            119.56,
+            -5.035
+          ],
+          [
+            119.57,
+            -4.985
+          ],
+          [
+            119.568,
+            -4.935
+          ],
+          [
+            119.555,
+            -4.88
+          ],
+          [
+            119.542,
+            -4.82
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Akses Bandara Sultan Hasanuddin Mandai",
+        "NOMOR_RUAS": "081",
+        "FUNGSI": "Arteri Khusus / Akses Bandara",
+        "STATUS": "Jalan Nasional",
+        "KELAS": "Kelas I Khusus",
+        "LEBAR_M": 16,
+        "PANJANG_KM": 8.5,
+        "PERMUKAAN": "Rigid Pavement Beton Bertulang 4 Lajur",
+        "KONDISI": "Baik",
+        "KECEPATAN_MAX_KMH": 80,
+        "WEWENANG": "Ditjen Bina Marga / AP I InJourney",
+        "TAHUN_KONSTRUKSI": 2005,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2023,
+        "COLOR": "#e63946",
+        "WEIGHT": 4.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.535,
+            -5.09
+          ],
+          [
+            119.55,
+            -5.075
+          ],
+          [
+            119.56,
+            -5.06
+          ],
+          [
+            119.555,
+            -5.045
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Poros Bantimurung - Wisata Kars (Asal Gowa-Maros)",
+        "NOMOR_RUAS": "KAB-007",
+        "FUNGSI": "Kolektor Sekunder",
+        "STATUS": "Jalan Provinsi",
+        "KELAS": "Kelas III",
+        "LEBAR_M": 7,
+        "PANJANG_KM": 14.8,
+        "PERMUKAAN": "Hotmix + Overlay (rawan longsor)",
+        "KONDISI": "Sedang",
+        "KECEPATAN_MAX_KMH": 50,
+        "WEWENANG": "Dinas PUPR Provinsi Sulawesi Selatan",
+        "TAHUN_KONSTRUKSI": 1985,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2020,
+        "COLOR": "#fcbf49",
+        "WEIGHT": 3,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.578,
+            -4.995
+          ],
+          [
+            119.61,
+            -5.01
+          ],
+          [
+            119.645,
+            -5.015
+          ],
+          [
+            119.67,
+            -5.016
+          ],
+          [
+            119.69,
+            -5.02
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Poros Simbang - Rammang-Rammang Geopark",
+        "NOMOR_RUAS": "KAB-012",
+        "FUNGSI": "Lokal Primer",
+        "STATUS": "Jalan Kabupaten",
+        "KELAS": "Kelas III B",
+        "LEBAR_M": 5.5,
+        "PANJANG_KM": 9.2,
+        "PERMUKAAN": "Beton Bertulang + Paving Block",
+        "KONDISI": "Baik",
+        "KECEPATAN_MAX_KMH": 40,
+        "WEWENANG": "Dinas PUPR Kabupaten Maros",
+        "TAHUN_KONSTRUKSI": 2018,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2023,
+        "COLOR": "#38b000",
+        "WEIGHT": 2.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.578,
+            -5.035
+          ],
+          [
+            119.605,
+            -5.02
+          ],
+          [
+            119.63,
+            -5.005
+          ],
+          [
+            119.615,
+            -4.96
+          ],
+          [
+            119.618,
+            -4.935
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Pesisir Bontoa - Pelabuhan Pa'dekakkang",
+        "NOMOR_RUAS": "KAB-031",
+        "FUNGSI": "Lokal Sekunder",
+        "STATUS": "Jalan Kabupaten",
+        "KELAS": "Kelas IV",
+        "LEBAR_M": 5.0,
+        "PANJANG_KM": 9.4,
+        "PERMUKAAN": "Beton Bertulang",
+        "KONDISI": "Sedang",
+        "KECEPATAN_MAX_KMH": 40,
+        "WEWENANG": "Dinas PUPR Kabupaten Maros",
+        "TAHUN_KONSTRUKSI": 2015,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2021,
+        "COLOR": "#6c757d",
+        "WEIGHT": 2,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.565,
+            -4.91
+          ],
+          [
+            119.53,
+            -4.89
+          ],
+          [
+            119.495,
+            -4.87
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Poros Moncongloe - BTP Makassar",
+        "NOMOR_RUAS": "KAB-003",
+        "FUNGSI": "Lokal Primer",
+        "STATUS": "Jalan Kabupaten",
+        "KELAS": "Kelas III",
+        "LEBAR_M": 6,
+        "PANJANG_KM": 12.3,
+        "PERMUKAAN": "Hotmix (rencana pelebaran)",
+        "KONDISI": "Baik",
+        "KECEPATAN_MAX_KMH": 60,
+        "WEWENANG": "Dinas PUPR Kabupaten Maros",
+        "TAHUN_KONSTRUKSI": 2010,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2022,
+        "COLOR": "#4a4e69",
+        "WEIGHT": 2.5,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.51,
+            -5.145
+          ],
+          [
+            119.535,
+            -5.138
+          ],
+          [
+            119.565,
+            -5.125
+          ],
+          [
+            119.595,
+            -5.11
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Lingkar Turikale (Inner Ring Road)",
+        "NOMOR_RUAS": "KAB-001A",
+        "FUNGSI": "Arteri Sekunder",
+        "STATUS": "Jalan Kabupaten",
+        "KELAS": "Kelas II",
+        "LEBAR_M": 10,
+        "PANJANG_KM": 6.8,
+        "PERMUKAAN": "Hotmix 2 Lajur",
+        "KONDISI": "Baik",
+        "KECEPATAN_MAX_KMH": 60,
+        "WEWENANG": "Dinas PUPR Kabupaten Maros",
+        "TAHUN_KONSTRUKSI": 2016,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2023,
+        "COLOR": "#4a4e69",
+        "WEIGHT": 3,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.56,
+            -5.02
+          ],
+          [
+            119.585,
+            -5.01
+          ],
+          [
+            119.59,
+            -4.99
+          ],
+          [
+            119.57,
+            -4.985
+          ],
+          [
+            119.555,
+            -4.995
+          ],
+          [
+            119.56,
+            -5.02
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAMA": "Jl. Camba - Cenrana - Mallawa (Poros Pegunungan Timur)",
+        "NOMOR_RUAS": "KAB-056",
+        "FUNGSI": "Lokal Primer",
+        "STATUS": "Jalan Kabupaten",
+        "KELAS": "Kelas IV",
+        "LEBAR_M": 5.0,
+        "PANJANG_KM": 42.0,
+        "PERMUKAAN": "Hotmix Parsial + Tanah Keras (ruas tertentu rusak)",
+        "KONDISI": "Rusak Ringan - Sedang",
+        "KECEPATAN_MAX_KMH": 30,
+        "WEWENANG": "Dinas PUPR Kabupaten Maros",
+        "TAHUN_KONSTRUKSI": 1990,
+        "TAHUN_PERBAIKAN_TERAKHIR": 2019,
+        "COLOR": "#9d4edd",
+        "WEIGHT": 2,
+        "DASH": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.83,
+            -4.92
+          ],
+          [
+            119.81,
+            -4.96
+          ],
+          [
+            119.78,
+            -5.0
+          ],
+          [
+            119.75,
+            -5.02
+          ],
+          [
+            119.86,
+            -4.86
+          ],
+          [
+            119.89,
+            -4.83
+          ]
+        ]
+      }
+    }
+  ]
+}
