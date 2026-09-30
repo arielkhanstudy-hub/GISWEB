@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi WebGIS Local - Geospasial & Big Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1b4332;
+      --primary-light: #2d6a4f;
+      --secondary: #2a9d8f;
+      --bg: #0f172a;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans', sans-serif; }
+    body { background: var(--bg); color: white; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    .pres-header { height: 50px; background: rgba(15,23,42,0.9); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; z-index: 10; }
+    .pres-title { font-size: 0.9rem; font-weight: 700; color: #52b788; display: flex; align-items: center; gap: 8px; }
+    .pres-controls { display: flex; align-items: center; gap: 10px; }
+    .btn-pres { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: white; padding: 5px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-pres:hover { background: rgba(255,255,255,0.25); }
+    .btn-pres.pdf { background: #e76f51; border-color: #f4a261; }
+    .slide-viewport { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: 20px; }
+    .slide-img { max-width: 96%; max-height: 90vh; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); object-fit: contain; }
+    .nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; transition: all 0.2s; }
+    .nav-arrow:hover { background: rgba(42,157,143,0.8); }
+    .nav-arrow.left { left: 30px; }
+    .nav-arrow.right { right: 30px; }
+    .pres-footer { height: 35px; background: rgba(15,23,42,0.95); border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font-size: 0.75rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="pres-header">
+    <div class="pres-title">
+      <i class="fa-solid fa-file-powerpoint"></i> Slide Presentasi WebGIS Local (12 Slide)
+    </div>
+    <div class="pres-controls">
+      <a href="index.html" class="btn-pres"><i class="fa-solid fa-map"></i> Buka WebGIS</a>
+      <a href="Presentasi_WebGIS_Local.pdf" target="_blank" class="btn-pres pdf"><i class="fa-solid fa-file-pdf"></i> Unduh File PDF</a>
+    </div>
+  </div>
+
+  <div class="slide-viewport">
+    <button class="nav-arrow left" id="btnPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="currentSlideImg" class="slide-img" src="slide_1.png" alt="Slide Presentasi">
+    <button class="nav-arrow right" id="btnNext"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div class="pres-footer">
+    <span>Ariel Khan (NIM: V126241001) &bull; Praktek Pengelolaan Big Data dan WebGIS</span>
+    <span id="slideCounter">Slide 1 dari 12</span>
+    <span>Gunakan tombol panah kiri/kanan keyboard</span>
+  </div>
+
+  <script>
+    const totalSlides = 12;
+    let currentSlide = 1;
+    const imgEl = document.getElementById('currentSlideImg');
+    const counterEl = document.getElementById('slideCounter');
+
+    function updateSlide(n) {
+      if (n < 1) n = 1;
+      if (n > totalSlides) n = totalSlides;
+      currentSlide = n;
+      imgEl.src = `slide_${currentSlide}.png`;
+      counterEl.innerText = `Slide ${currentSlide} dari ${totalSlides}`;
+    }
+
+    document.getElementById('btnPrev').addEventListener('click', () => updateSlide(currentSlide - 1));
+    document.getElementById('btnNext').addEventListener('click', () => updateSlide(currentSlide + 1));
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') updateSlide(currentSlide - 1);
+      if (e.key === 'ArrowRight' || e.key === ' ') updateSlide(currentSlide + 1);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGIS Local - Sistem Informasi Geospasial Interaktif</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="header-navbar">
+    <div class="brand-wrapper">
+      <div class="brand-logo-badge">
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <div class="brand-title-group">
+        <h1>
+          WebGIS Local
+          <span class="tag-provinsi">Multi-Layer & Multi-Format</span>
+        </h1>
+        <p>Sistem Informasi Geospasial Interaktif Berbasis Leaflet & Big Data Spasial (Mendukung Visualisasi Peta, Analisis Spasial, Integrasi WMS, dan Input Data Manual Multi-Format)</p>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <button id="btnOpenUploadModal" class="btn-nav highlight">
+        <i class="fa-solid fa-cloud-arrow-up"></i> Upload Layer
+      </button>
+      <button id="btnToggleTable" class="btn-nav">
+        <i class="fa-solid fa-table-list"></i> Tabel Data
+      </button>
+      <button id="btnToggleLegend" class="btn-nav">
+        <i class="fa-solid fa-list-check"></i> Legenda
+      </button>
+      <a href="Presentasi_WebGIS_Local.pdf" target="_blank" class="btn-nav danger-accent" title="Buka File Presentasi PDF WebGIS Local">
+        <i class="fa-solid fa-file-pdf"></i> Presentasi PDF
+      </a>
+      <button id="btnOpenHelpModal" class="btn-nav">
+        <i class="fa-solid fa-circle-info"></i> Panduan
+      </button>
+    </div>
+  </header>
+
+  <!-- Application Body Layout -->
+  <div class="app-container">
+    
+    <!-- Sidebar Panel -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Navigation Tabs inside Sidebar -->
+      <div class="sidebar-tabs">
+        <button class="tab-btn active" data-tab="tab-layers">
+          <i class="fa-solid fa-layer-group"></i> Layer Peta
+        </button>
+        <button class="tab-btn" data-tab="tab-stats">
+          <i class="fa-solid fa-chart-pie"></i> Statistik
+        </button>
+        <button class="tab-btn" data-tab="tab-search">
+          <i class="fa-solid fa-magnifying-glass"></i> Pencarian
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="sidebar-content">
+        
+        <!-- TAB 1: LAYERS -->
+        <div class="tab-panel active" id="tab-layers">
+          
+          <!-- Pilihan Basemap -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-earth-americas"></i> Peta Dasar (Basemap)
+              </span>
+            </div>
+            <div class="basemap-grid">
+              <div class="basemap-option active" data-basemap="osm">
+                <i class="fa-solid fa-map"></i>
+                <span>OpenStreetMap</span>
+              </div>
+              <div class="basemap-option" data-basemap="satellite">
+                <i class="fa-solid fa-satellite"></i>
+                <span>Esri Satellite</span>
+              </div>
+              <div class="basemap-option" data-basemap="topo">
+                <i class="fa-solid fa-mountain"></i>
+                <span>Topographic</span>
+              </div>
+              <div class="basemap-option" data-basemap="dark">
+                <i class="fa-solid fa-moon"></i>
+                <span>Carto Dark</span>
+              </div>
+              <div class="basemap-option" data-basemap="wms_topo" title="Layanan WMS Topografi OGC Mundialis">
+                <span class="wms-badge">WMS</span>
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Mundialis Topo</span>
+              </div>
+              <div class="basemap-option" data-basemap="wms_hillshade" title="Layanan WMS SRTM30 Hillshade Mundialis">
+                <span class="wms-badge">WMS</span>
+                <i class="fa-solid fa-layer-group"></i>
+                <span>SRTM Hillshade</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer Tematik Utama -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-sliders"></i> Layer Tematik Geospasial
+              </span>
+              <span style="font-size: 0.7rem; color: var(--text-secondary);">Z-Index Sesuai Urutan</span>
+            </div>
+
+            <div class="layer-group">
+              
+              <!-- Layer: Toponim & Fasilitas (Z-Index Paling Atas: 600) -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #e63946;"></span>
+                    <span class="layer-name">Toponim & Titik Fasilitas</span>
+                    <span class="layer-badge-count" id="countToponim">25</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleToponim" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+                <div class="layer-sub-controls">
+                  <div class="opacity-slider-box">
+                    <span>Transparansi:</span>
+                    <input type="range" min="0.1" max="1" step="0.1" value="1" data-layer="toponim">
+                  </div>
+                  <button class="btn-zoom-layer" data-zoom-layer="toponim" title="Fokuskan ke Layer">
+                    <i class="fa-solid fa-crosshairs"></i> Zoom
+                  </button>
+                </div>
+              </div>
+
+              <!-- Layer: Jaringan Jalan (Z-Index: 480) -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #f77f00;"></span>
+                    <span class="layer-name">Jaringan Jalan & Kereta</span>
+                    <span class="layer-badge-count" id="countJalan">10</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleJalan" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+                <div class="layer-sub-controls">
+                  <div class="opacity-slider-box">
+                    <span>Transparansi:</span>
+                    <input type="range" min="0.1" max="1" step="0.1" value="1" data-layer="jalan">
+                  </div>
+                  <button class="btn-zoom-layer" data-zoom-layer="jalan" title="Fokuskan ke Layer">
+                    <i class="fa-solid fa-crosshairs"></i> Zoom
+                  </button>
+                </div>
+              </div>
+
+              <!-- Layer: Jaringan Sungai & Hidrologi (Z-Index: 450) -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #0077b6;"></span>
+                    <span class="layer-name">Jaringan Sungai & Air</span>
+                    <span class="layer-badge-count" id="countSungai">6</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleSungai" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+                <div class="layer-sub-controls">
+                  <div class="opacity-slider-box">
+                    <span>Transparansi:</span>
+                    <input type="range" min="0.1" max="1" step="0.1" value="1" data-layer="sungai">
+                  </div>
+                  <button class="btn-zoom-layer" data-zoom-layer="sungai" title="Fokuskan ke Layer">
+                    <i class="fa-solid fa-crosshairs"></i> Zoom
+                  </button>
+                </div>
+              </div>
+
+              <!-- Layer: Batas Administrasi Kecamatan (Z-Index: 420) -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #2a9d8f;"></span>
+                    <span class="layer-name">Batas Kecamatan (14 Wilayah)</span>
+                    <span class="layer-badge-count" id="countKecamatan">14</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleKecamatan" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+                <div class="layer-sub-controls">
+                  <div class="opacity-slider-box">
+                    <span>Transparansi:</span>
+                    <input type="range" min="0.1" max="1" step="0.1" value="0.7" data-layer="kecamatan">
+                  </div>
+                  <button class="btn-zoom-layer" data-zoom-layer="kecamatan" title="Fokuskan ke Layer">
+                    <i class="fa-solid fa-crosshairs"></i> Zoom
+                  </button>
+                </div>
+              </div>
+
+              <!-- Layer: Tutupan Lahan & Kawasan Hutan (Z-Index: 400) -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #1b4332;"></span>
+                    <span class="layer-name">Tutupan Lahan (KLHK 2022)</span>
+                    <span class="layer-badge-count" id="countTutupan">10</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleTutupan" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+                <div class="layer-sub-controls">
+                  <div class="opacity-slider-box">
+                    <span>Transparansi:</span>
+                    <input type="range" min="0.1" max="1" step="0.1" value="0.65" data-layer="tutupan">
+                  </div>
+                  <button class="btn-zoom-layer" data-zoom-layer="tutupan" title="Fokuskan ke Layer">
+                    <i class="fa-solid fa-crosshairs"></i> Zoom
+                  </button>
+                </div>
+              </div>
+
+              <!-- Layer: Batas Kabupaten Maros Outer Outline -->
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #111827;"></span>
+                    <span class="layer-name">Garis Batas Kabupaten</span>
+                    <span class="layer-badge-count">1</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleKabupaten" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Layanan WMS (Web Map Service) Terintegrasi -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-network-wired"></i> Layanan WMS (OGC Web Map Service)
+              </span>
+            </div>
+            <p style="font-size: 0.72rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Mengintegrasikan peta dari server geospasial WMS eksternal secara dinamis menggunakan parameter <code>L.tileLayer.wms()</code>.
+            </p>
+            <div class="layer-group">
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #3b82f6;"></span>
+                    <span class="layer-name">WMS Radar Cuaca (IEM NEXRAD)</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleWmsPrecip">
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #8b5cf6;"></span>
+                    <span class="layer-name">WMS Citra NASA GIBS MODIS</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleWmsOsm">
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="layer-item">
+                <div class="layer-main-row">
+                  <div class="layer-label-group">
+                    <span class="layer-color-badge" style="background: #f77f00;"></span>
+                    <span class="layer-name">WMS OpenStreetMap Terbuka</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="layerToggleWmsOrtofoto">
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer Hasil Upload Pengguna -->
+          <div class="section-card" id="userLayersCard">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-folder-open"></i> Layer Upload Pengguna
+              </span>
+              <span class="layer-badge-count" id="countUserLayers">0</span>
+            </div>
+            <div id="userLayersList" class="layer-group">
+              <p style="font-size: 0.74rem; color: var(--text-muted); text-align: center; padding: 8px;">
+                Belum ada layer tambahan. Klik tombol <strong>Upload Layer</strong> di atas untuk menambahkan berkas Anda.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: STATISTIK WILAYAH -->
+        <div class="tab-panel" id="tab-stats">
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-chart-column"></i> Profil Kabupaten Maros
+              </span>
+              <span style="font-size: 0.7rem; color: var(--primary); font-weight: 700;">BPS 2024</span>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">Luas Wilayah</span>
+                <span class="stat-value">1.619 km²</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Jumlah Penduduk</span>
+                <span class="stat-value">389.277 Jiwa</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Jumlah Kecamatan</span>
+                <span class="stat-value">14 Kecamatan</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Desa / Kelurahan</span>
+                <span class="stat-value">103 Wilayah</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rincian Penduduk 14 Kecamatan BPS 2023 -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-users"></i> Penduduk per Kecamatan (BPS 2023)
+              </span>
+            </div>
+            <div id="statKecamatanList" style="display: flex; flex-direction: column; gap: 7px; margin-top: 4px;">
+              <!-- Diisi otomatis oleh JavaScript -->
+            </div>
+            <div class="tag-bps-source">
+              📊 Sumber: BPS Kabupaten Maros (Maros Dalam Angka 2024)
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">
+                <i class="fa-solid fa-tree"></i> Tutupan Lahan & Hutan (KLHK 2022)
+              </span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Hutan Lindung & Primer TN:</span>
+                <strong>43.750 Ha</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Hutan Sekunder & Hulu:</span>
+                <strong>28.400 Ha</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Kawasan Karst Geopark:</span>
+                <strong>18.200 Ha</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Pertanian Sawah Irigasi:</span>
+                <strong>32.150 Ha</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Tambak & Pesisir:</span>
+                <strong>14.500 Ha</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                <span>Area Terbangun & Bandara:</span>
+                <strong>12.118 Ha</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: PENCARIAN FITUR -->
+        <div class="tab-panel" id="tab-search">
+          <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari kecamatan, toponim, jalan...">
+          </div>
+          <div id="searchResultsList" style="display: flex; flex-direction: column; gap: 6px;">
+            <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+              Ketikkan kata kunci di atas untuk mencari entitas spasial secara instan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button (Mobile & Responsive) -->
+    <button id="btnToggleSidebar" class="sidebar-toggle-btn" title="Buka/Tutup Sidebar">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Map Viewport Container -->
+    <main class="map-wrapper">
+      <div id="map"></div>
+
+      <!-- Floating Map Toolbar -->
+      <div class="floating-map-tools">
+        <button id="btnResetView" class="tool-btn" title="Kembalikan Tampilan Peta ke Awal">
+          <i class="fa-solid fa-house"></i>
+        </button>
+        <button id="btnMeasureDistance" class="tool-btn" title="Ukur Jarak & Panjang Garis">
+          <i class="fa-solid fa-ruler"></i>
+        </button>
+        <button id="btnMeasureArea" class="tool-btn" title="Ukur Luas Poligon">
+          <i class="fa-solid fa-draw-polygon"></i>
+        </button>
+        <button id="btnLocateUser" class="tool-btn" title="Deteksi Posisi Saya (GPS)">
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
+        <button id="btnPrintMap" class="tool-btn" title="Cetak / Unduh Peta">
+          <i class="fa-solid fa-print"></i>
+        </button>
+        <button id="btnFullscreen" class="tool-btn" title="Mode Layar Penuh">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      </div>
+
+      <!-- Live Coordinates & Scale Bar Status Bar -->
+      <div class="map-status-bar">
+        <div class="status-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="coordDisplay">Lat: -5.0005, Lng: 119.5750</span>
+        </div>
+        <div class="status-item">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span id="zoomDisplay">Zoom: 11</span>
+        </div>
+        <div class="status-item">
+          <i class="fa-solid fa-shield"></i>
+          <span>WGS 84 (EPSG:4326)</span>
+        </div>
+      </div>
+
+      <!-- Floating Map Legend -->
+      <div class="map-floating-legend" id="floatingLegend">
+        <div class="legend-header">
+          <span><i class="fa-solid fa-layer-group"></i> Legenda Peta</span>
+          <div class="legend-header-actions">
+            <button id="btnMinimizeLegend" title="Perkecil/Buka Legenda">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+        <div class="legend-body" id="legendBody">
+          <!-- Dynamic legend entries generated via JS -->
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Attribute Table Drawer (Bottom Panel) -->
+    <div class="attribute-table-drawer" id="tableDrawer">
+      <div class="table-drawer-header">
+        <div class="table-header-left">
+          <span style="font-weight: 700; font-size: 0.85rem; color: #1e293b;">
+            <i class="fa-solid fa-table"></i> Tabel Atribut Geospasial
+          </span>
+          <select id="tableLayerSelect" class="table-layer-select">
+            <option value="kecamatan">Batas Kecamatan (BPS 2024)</option>
+            <option value="jalan">Jaringan Jalan (PUPR)</option>
+            <option value="sungai">Jaringan Sungai (BBWS)</option>
+            <option value="tutupan">Tutupan Lahan (KLHK)</option>
+            <option value="toponim">Toponim & Fasilitas</option>
+          </select>
+          <input type="text" id="tableFilterInput" placeholder="Cari dalam tabel..." style="padding: 4px 8px; font-size: 0.76rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="btnExportCsv" class="btn-sample" style="padding: 4px 10px;">
+            <i class="fa-solid fa-download"></i> Ekspor CSV
+          </button>
+          <button id="btnCloseTable" class="btn-sample" style="padding: 4px 8px;">
+            <i class="fa-solid fa-xmark"></i> Tutup
+          </button>
+        </div>
+      </div>
+      <div class="table-body-container">
+        <table class="data-table" id="attributeDataTable">
+          <thead id="attributeTableHead"></thead>
+          <tbody id="attributeTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL: UPLOAD LAYER (SHP, GDB, GPKG, KML, KMZ, GeoJSON, CSV, dll) -->
+  <div class="modal-overlay" id="uploadModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Upload Layer Peta Dasar / Tematik
+        </span>
+        <button class="modal-close-btn" id="btnCloseUploadModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.8rem; color: var(--text-secondary);">
+          Unggah berkas data spasial Anda untuk ditambahkan langsung ke peta. Mendukung <strong>semua format GIS</strong>: SHP (.zip), GDB (.zip), GPKG, KML, KMZ, GeoJSON, GPX, DXF, CSV (koordinat), dan TAB via backend converter Python.
+        </p>
+
+        <!-- Dropzone Area -->
+        <div class="upload-dropzone" id="dropZone">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          <p><strong>Klik untuk memilih file</strong> atau seret (drag and drop) file ke kotak ini</p>
+          <input type="file" id="fileInput" accept=".geojson,.json,.kml,.kmz,.csv,.zip,.shp,.gdb,.gpkg,.gpx,.dxf,.tab" style="display: none;">
+        </div>
+
+        <!-- Sample Files for Instant Testing -->
+        <div class="sample-buttons-box">
+          <span style="font-size: 0.74rem; font-weight: 700; color: #475569;">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Uji Coba Cepat (Sampel Berkas Spasial Siap Pakai):
+          </span>
+          <div class="sample-btn-row">
+            <button class="btn-sample" id="btnLoadSampleBencana">
+              <i class="fa-solid fa-triangle-exclamation"></i> Risiko Bencana (GeoJSON)
+            </button>
+            <button class="btn-sample" id="btnLoadSampleShp">
+              <i class="fa-solid fa-file-zipper"></i> Batas Desa (SHP ZIP)
+            </button>
+            <button class="btn-sample" id="btnLoadSampleKml">
+              <i class="fa-solid fa-earth-americas"></i> RTRW Maros (KML)
+            </button>
+            <button class="btn-sample" id="btnLoadSampleCsv">
+              <i class="fa-solid fa-file-csv"></i> Titik Puskesmas (CSV)
+            </button>
+            <button class="btn-sample" id="btnLoadSampleGdb">
+              <i class="fa-solid fa-database"></i> Geodatabase (GDB ZIP)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PANDUAN TUGAS & INFORMASI KULIAH -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title">
+          <i class="fa-solid fa-circle-question"></i> Informasi Sistem & Panduan WebGIS Local
+        </span>
+        <button class="modal-close-btn" id="btnCloseHelpModal">&times;</button>
+      </div>
+      <div class="modal-body" style="font-size: 0.8rem; line-height: 1.6; color: #334155;">
+        <!-- Identitas Akademik Penugasan -->
+        <div style="background: #f1f5f9; border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 6px; margin-bottom: 14px;">
+          <h4 style="margin: 0 0 6px 0; color: var(--primary); font-size: 0.92rem;">
+            <i class="fa-solid fa-graduation-cap"></i> Penugasan Akademik Mahasiswa
+          </h4>
+          <p style="margin: 3px 0;"><strong>Mata Kuliah:</strong> PRAKTEK PENGELOLAAN BIG DATA DAN WEBGIS</p>
+          <p style="margin: 3px 0;"><strong>Nama Mahasiswa:</strong> Ariel Khan</p>
+          <p style="margin: 3px 0;"><strong>NIM:</strong> V126241001</p>
+          <p style="margin: 3px 0;"><strong>Dosen Pengampu:</strong> Andang Suryana Soma, S.Hut., MP., Ph.D</p>
+          <p style="margin: 3px 0; font-size: 0.74rem; color: #64748b;">Fakultas Kehutanan Universitas Hasanuddin</p>
+        </div>
+
+        <h4 style="color: #0f172a; margin-bottom: 4px;">Fitur & Arsitektur WebGIS Local:</h4>
+        <p>WebGIS Local dirancang fleksibel untuk memvisualisasikan data geospasial acuan maupun <strong>menambahkan data geospasial kustom secara manual tanpa batas</strong>:</p>
+        <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 4px;">
+          <li><strong>Input / Upload Data Manual:</strong> Mendukung berkas SHP (.zip), Geodatabase ESRI (.zip GDB), GeoPackage (.gpkg), KML, KMZ, GeoJSON, CSV (titik koordinat), GPX, DXF, dan MapInfo TAB dengan konversi otomatis ke GeoJSON.</li>
+          <li><strong>Layer Bawaan Lengkap:</strong> Disertai 5 layer tematik acuan (Administrasi, Jalan, Sungai, Toponim Fasilitas, Tutupan Lahan).</li>
+          <li><strong>Integrasi Layanan WMS Terverifikasi:</strong> Menghubungkan OGC WMS Radar Cuaca (IEM NEXRAD), Citra Satelit Real-time (NASA GIBS MODIS), dan Peta Terbuka Mundialis OSM.</li>
+          <li><strong>Manajemen Z-Index Terstruktur:</strong> Menggunakan Leaflet Custom Panes agar titik dan garis selalu berada di atas layer poligon.</li>
+          <li><strong>Fitur Analisis & Interaksi:</strong> Buffer spasial instan, pencarian fitur, tabel data atribut real-time dengan filter cepat, serta ekspor CSV.</li>
+        </ul>
+        <div style="margin-top: 14px; display: flex; justify-content: flex-end; gap: 8px;">
+          <a href="Presentasi_WebGIS_Local.pdf" target="_blank" class="btn-nav highlight" style="display: inline-flex;">
+            <i class="fa-solid fa-file-pdf"></i> Unduh File Presentasi PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- External Parsers for Uploads -->
+  <script src="https://unpkg.com/@tmcw/togeojson@5.8.1/dist/togeojson.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+
+  <!-- Main WebGIS Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
