@@ -69,7 +69,7 @@ Jika ingin menjalankan melalui local server:
 cd C:\Users\ASUS\.gemini\antigravity-ide\scratch\webgis-leaflet-kabupaten
 python -m http.server 3000 --bind 127.0.0.1
 ```
-Buka tautan: [http://127.0.0.1:3000/index.html](http://127.0.0.1:3000/index.html)
+Buka tautan: [http://127.0.0.1:3000/index.html](http://127.0.0.1:3000/index.html) / https://arielkhanstudy-hub.github.io/GISWEB/
 
 ---
 
